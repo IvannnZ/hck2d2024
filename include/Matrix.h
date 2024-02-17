@@ -27,8 +27,6 @@ public:
     return elements_[row * columns_ + column];
   }
 
-  // Matrix matr(2,2) = [1,2,3,4];
-
   bool operator==(Matrix matrix) const {
     if (rows_ != matrix.rows_ || columns_ != matrix.columns_) {
       return false;
@@ -57,9 +55,8 @@ public:
     return result_matrix;
   };
 
-  Matrix operator+(Matrix matrix) const {   
-    assert(this->rows_ != matrix.rows_ ||
-           this->columns_ != matrix.columns_);
+  Matrix operator+(Matrix matrix) const {
+    assert(this->rows_ != matrix.rows_ || this->columns_ != matrix.columns_);
     Matrix result_matrix(rows_, columns_);
     for (size_t i = 0; i < rows_; i++) {
       for (size_t j = 0; j < columns_; j++) {
