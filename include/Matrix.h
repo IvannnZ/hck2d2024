@@ -50,7 +50,7 @@ Matrix(size_t rows, size_t columns){
 
     Matrix multiplyScalar (double num)const{
         
-    };
+};
 
     
 
